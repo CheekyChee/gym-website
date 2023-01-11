@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   /* A way to alias the `@` symbol to the `src` folder. */
   resolve: {
-    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
+    alias: [{ find: "@", replacement: path.resolve(__dirname, "src") }],
   },
 });
