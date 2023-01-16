@@ -1,7 +1,12 @@
 import { SelectedPage } from "@/shared/types";
+import { motion } from "framer-motion";
 import { FC, Fragment } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+const childVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.5 } },
+};
 export interface BenefitCardProps {
   icon: React.ReactNode;
   title: string;
@@ -13,12 +18,15 @@ export interface BenefitCardProps {
 export const BenefitCard: FC<BenefitCardProps> = (props) => {
   const { description, icon, title, key, setSelectedPage } = props;
   return (
-    <div className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center">
-      <div className="mb-4 flex justify-center">
+    <motion.div
+      variants={childVariant}
+      className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center"
+    >
+      <motion.div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-gray-100 bg-primary-100 p-4">
           {icon}
         </div>
-      </div>
+      </motion.div>
 
       <h4 className="font-bold">{title}</h4>
       <p className="my-3">{description}</p>
@@ -29,6 +37,6 @@ export const BenefitCard: FC<BenefitCardProps> = (props) => {
       >
         <p>Learn More</p>
       </AnchorLink>
-    </div>
+    </motion.div>
   );
 };
