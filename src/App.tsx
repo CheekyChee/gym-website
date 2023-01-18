@@ -3,6 +3,8 @@ import Navbar from "./scenes/navbar/index";
 import Home from "./scenes/home/index";
 import Benefits from "./scenes/benefits/index";
 import OurClasses from "./scenes/ourClasses/index";
+import ContactUs from "./scenes/contactus/index";
+import Footer from "./scenes/footer/index";
 import { SelectedPage } from "@/shared/types";
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
       <Home setSelectedPage={setSelectedPage} />
       <Benefits setSelectedPage={setSelectedPage} />
       <OurClasses setSelectedPage={setSelectedPage} />
+      <ContactUs setSelectedPage={setSelectedPage} />
+      <Footer setSelectedPage={setSelectedPage} />
     </div>
   );
 }
