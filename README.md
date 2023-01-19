@@ -1,3 +1,3 @@
 <h1 align="center">Gym Website Learning Project</h1>
 
-<p align="center">[Click for Demo](https://gym-website-ik7lpln4u-cheekychee.vercel.app)</p>
+[Click for Demo](https://gym-website-ik7lpln4u-cheekychee.vercel.app)
